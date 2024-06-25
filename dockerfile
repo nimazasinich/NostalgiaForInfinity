@@ -1,9 +1,11 @@
-FROM python:3.9-slim
+FROM python:3.10
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
-CMD ["python", "main.py"]
+RUN python -c "import py_find_1st; print('Package imported successfully!')"
+ 
