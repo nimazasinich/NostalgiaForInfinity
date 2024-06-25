@@ -27,4 +27,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: 24498743/nostalgia-for-infinity:latest
+        tags: your-dockerhub-username/your-repository-name:latest
