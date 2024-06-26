@@ -13,6 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
@@ -25,6 +30,6 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
-        context: .
+        context: .  # Build from the current directory
         push: true
-        tags: 24498743/nostalgia-for-infinity:latest
+        tags: your-dockerhub-username/your-repository-name:latest
