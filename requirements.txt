@@ -1,5 +1,4 @@
 flask
 requests
-py_find_1st
 freqtrade
 vboxapi
